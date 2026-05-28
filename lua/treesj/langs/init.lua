@@ -40,6 +40,8 @@ M.configured_langs = {
   'julia',
   'terraform',
   'typst',
+  'qml',
+  'qmljs',
 }
 
 M.presets = {}
