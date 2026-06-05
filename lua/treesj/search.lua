@@ -289,10 +289,8 @@ function M.range(tsn, preset)
   local er, ec = get_last_symbol_range(tsn, to)
 
   if preset and (non_bracket_node and not shrink_node) then
-    -- Indentation-based blocks (e.g. GDScript) have no closing delimiter token.
-    -- Setting `non_bracket_node.outer_framing = false` stops framing from
-    -- climbing to the parent's sibling, which would otherwise extend the range
-    -- over the following statement and swallow it.
+    -- Indentation-based blocks (e.g. Python) have no closing delimiter token.
+    -- `outer_framing = false` stops framing from climbing to the parent's sibling
     local climb = type(non_bracket_node) ~= 'table'
       or non_bracket_node.outer_framing ~= false
 
