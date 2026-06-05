@@ -58,6 +58,24 @@ local data_for_split = {
     expected = { 55, 60 },
     result = { 51, 56 },
   },
+  {
+    path = PATH,
+    mode = 'split',
+    lang = LANG,
+    desc = 'lang "%s", node "body" and "if_statement", preset default',
+    cursor = { 64, 11 },
+    expected = { 67, 69 },
+    result = { 63, 65 },
+  },
+  {
+    path = PATH,
+    mode = 'split',
+    lang = LANG,
+    desc = 'lang "%s", node "body" and "function_definition", preset default',
+    cursor = { 72, 13 },
+    expected = { 74, 76 },
+    result = { 71, 73 },
+  },
 }
 
 local treesj = require('treesj')

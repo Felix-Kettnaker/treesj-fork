@@ -58,3 +58,19 @@ func reassign():
     2,
     3,
   ]
+
+# RESULT OF JOIN (node "body" and "if_statement", preset default)
+func check():
+  if cond: do_x()
+
+# RESULT OF SPLIT (node "body" and "if_statement", preset default)
+func check():
+  if cond:
+    do_x()
+
+# RESULT OF JOIN (node "body" and "function_definition", preset default)
+func noop(): pass
+
+# RESULT OF SPLIT (node "body" and "function_definition", preset default)
+func noop():
+  pass
